@@ -1,0 +1,18 @@
+h1,h2,h3{
+  color:orange;
+}
+
+body {
+  /* Base64 encoded transparent gif */
+  background: url('http://img.clipartall.com/hair-salon-clip-art-clipartfox-clip-art-hair-design-1538_1537.jpg');
+}
+
+.jumbotron {
+    position: relative;
+    background:  url("http://cdn32.sptndigital.com/sites/uk.smc/files/ct_movie_f_primary_image/you_dont_mess_zohan_imgcropped_1600x900.jpg") center center;
+    width: 75%;
+    height: 75%;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+}

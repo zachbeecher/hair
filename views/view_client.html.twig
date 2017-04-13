@@ -1,0 +1,13 @@
+{% include 'header.html.twig' %}
+<div class="jumbotron">
+	<h1>Zohan's Hair Salon</h1>
+	<h3>{{ client.getName }}</h3>
+	<a href="/stylist/{{ stylist.getId }}/edit/{{ client.getId }}"><button>Edit</button></a>
+	<form action="/stylist/{{ stylist.getId }}/delete/{{ client.getId }}" method="post">
+		<input name="_method" type="hidden" value="delete">
+		<button>Delete</button>
+	</form>
+	<a href="/stylist/{{ stylist.getId }}"><button>Back to {{ stylist.getName }}</button></a>
+	<h2><a href="/">Click here to go back home</h2>
+</div>
+{% include 'footer.html.twig' %}

@@ -1,0 +1,22 @@
+{% include 'header.html.twig' %}
+<div class="jumbotron">
+	<h1>Zohan's Hair Salon</h1>
+	<ul>
+	{% for stylist in stylists %}
+
+	<a href="/stylist/{{ stylist.getId }}"><li>{{ stylist.getName }}</li></a>
+	<form action="/stylists/{{stylist.getId}}" method="post">
+		<input name="_method" type="hidden" value="delete">
+		<button type="submit">Delete stylist</button>
+	</form>
+	{% endfor %}
+	</ul>
+	<form action="/stylists" method="post">
+		<label for='name'>Stylist Name:</label>
+		<input name='name' id="name" type='text'>
+		<button type="submit"> Add stylist</button>
+	</form>
+	<h2><a href="/">Click here to go back home</h2>
+</div>
+
+{% include 'footer.html.twig' %}
